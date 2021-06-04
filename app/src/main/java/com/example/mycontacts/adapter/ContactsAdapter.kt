@@ -1,11 +1,11 @@
-package com.example.mycontacts.ux.adapter
+package com.example.mycontacts.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mycontacts.R
-import com.example.mycontacts.ux.model.Contacts
+import com.example.mycontacts.model.Contacts
 import kotlinx.android.synthetic.main.item_layout_contacts.view.*
 
 class ContactsAdapter(val contacts: ArrayList<Contacts>) :
@@ -13,7 +13,7 @@ class ContactsAdapter(val contacts: ArrayList<Contacts>) :
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContactsViewHolder {
         return ContactsViewHolder(
-            LayoutInflater.from(parent.context).inflate(getItemViewType(viewType), parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.item_layout_contacts, parent, false)
         )
     }
 
@@ -23,10 +23,6 @@ class ContactsAdapter(val contacts: ArrayList<Contacts>) :
 
     override fun getItemCount(): Int {
         return contacts.size
-    }
-
-    override fun getItemViewType(position: Int): Int {
-        return R.layout.item_layout_contacts
     }
 
     inner class ContactsViewHolder(view: View) : RecyclerView.ViewHolder(view) {

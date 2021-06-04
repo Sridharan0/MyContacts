@@ -1,4 +1,4 @@
-package com.example.mycontacts.ux.model
+package com.example.mycontacts.model
 
 data class Contacts(
     var name: String = "",

@@ -1,10 +1,10 @@
-package com.example.mycontacts.ux.utils
+package com.example.mycontacts.utils
 
 import android.content.ContentResolver
 import android.content.Context
 import android.database.Cursor
 import android.provider.ContactsContract
-import com.example.mycontacts.ux.model.Contacts
+import com.example.mycontacts.model.Contacts
 
 
 object ContactUtils {

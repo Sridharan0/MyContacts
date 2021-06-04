@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyContacts">
         <activity
-            android:name=".ux.activity.MainActivity"
+            android:name="com.example.mycontacts.activity.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.MyContacts.NoActionBar"

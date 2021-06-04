@@ -36,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="18dp"
-        android:hint="eg.john"
+        android:hint="@string/eg_john"
         android:textColor="@color/text_color"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -61,7 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="18dp"
-        android:hint="eg.paul"
+        android:hint="@string/eg_paul"
         android:textColor="@color/text_color"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -86,7 +86,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="18dp"
-        android:hint="eg:1234567890"
+        android:hint="@string/eg_1234567890"
         android:inputType="number"
         android:maxLength="10"
         android:textColor="@color/text_color"
@@ -113,7 +113,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="18dp"
-        android:hint="eg.johnpaul@gmail.com"
+        android:hint="@string/eg_johnpaul_gmail_com"
         android:inputType="textEmailAddress"
         android:textColor="@color/text_color"
         android:textSize="14sp"
@@ -121,11 +121,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/emailTV" />
 
-
     <Button
         android:id="@+id/saveBtn"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="@dimen/dimen_40dp"
         android:layout_marginTop="@dimen/dimen_20dp"
         android:background="@drawable/round_corner_8dp"
         android:text="@string/save"

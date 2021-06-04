@@ -1,6 +1,5 @@
-package com.example.mycontacts.ux
+package com.example.mycontacts.fragments
 
-import android.app.Activity
 import android.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.example.mycontacts.R

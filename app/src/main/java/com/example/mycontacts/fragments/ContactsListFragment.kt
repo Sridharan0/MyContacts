@@ -1,4 +1,4 @@
-package com.example.mycontacts.ux.fragments
+package com.example.mycontacts.fragments
 
 import android.os.Bundle
 import android.text.Editable
@@ -8,10 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mycontacts.R
-import com.example.mycontacts.ux.BaseFragment
-import com.example.mycontacts.ux.adapter.ContactsAdapter
-import com.example.mycontacts.ux.model.Contacts
-import com.example.mycontacts.ux.utils.ContactUtils
+import com.example.mycontacts.adapter.ContactsAdapter
+import com.example.mycontacts.model.Contacts
+import com.example.mycontacts.utils.ContactUtils
 import kotlinx.android.synthetic.main.fragment_contacts_list.*
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors

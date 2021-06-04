@@ -12,4 +12,8 @@
     <string name="alert">Alert</string>
     <string name="contact_list">Contact List</string>
     <string name="image">image</string>
+    <string name="eg_john">eg.john</string>
+    <string name="eg_paul">eg.paul</string>
+    <string name="eg_1234567890">eg:1234567890</string>
+    <string name="eg_johnpaul_gmail_com">eg.johnpaul@gmail.com</string>
 </resources>

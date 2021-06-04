@@ -1,4 +1,4 @@
-package com.example.mycontacts.ux.fragments
+package com.example.mycontacts.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.mycontacts.R
-import com.example.mycontacts.ux.BaseFragment
 import kotlinx.android.synthetic.main.fragment_create_contact.*
 
 class CreateContactFragment : BaseFragment() {
@@ -39,11 +38,6 @@ class CreateContactFragment : BaseFragment() {
                     ContactsContract.Intents.Insert.NAME,
                     firstNameET.text.toString() + " " + lastNameET.text.toString()
                 )
-//                putExtra(ContactsContract.Intents.Insert.EMAIL, "asbakbs")
-//                putExtra(
-//                    ContactsContract.Intents.Insert.EMAIL_TYPE,
-//                    ContactsContract.CommonDataKinds.Email.TYPE_WORK
-//                )
                 putExtra(ContactsContract.Intents.Insert.PHONE, numberET.text.toString())
             }
             startActivity(intent)

@@ -1,4 +1,4 @@
-package com.example.mycontacts.ux.activity
+package com.example.mycontacts.activity
 
 import android.Manifest
 import android.content.Context
@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.mycontacts.R
-import com.example.mycontacts.ux.fragments.ContactsListFragment
+import com.example.mycontacts.fragments.ContactsListFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,16 +37,16 @@ class MainActivity : AppCompatActivity() {
 
     private fun getRequiredPermissions(): Array<String?> {
         return arrayOf(
-                Manifest.permission.READ_CONTACTS
+            Manifest.permission.READ_CONTACTS
         )
     }
 
     private fun isPermissionGranted(
-            context: Context,
-            permission: String?
+        context: Context,
+        permission: String?
     ): Boolean {
         if (ContextCompat.checkSelfPermission(context, permission!!)
-                == PackageManager.PERMISSION_GRANTED
+            == PackageManager.PERMISSION_GRANTED
         ) {
             return true
         }
@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun getRuntimePermissions() {
         val allNeededPermissions: MutableList<String?> =
-                ArrayList()
+            ArrayList()
         for (permission in getRequiredPermissions()) {
             if (!isPermissionGranted(this, permission)) {
                 allNeededPermissions.add(permission)
@@ -64,28 +64,32 @@ class MainActivity : AppCompatActivity() {
         if (!allNeededPermissions.isEmpty()) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 this.requestPermissions(
-                        allNeededPermissions.toTypedArray(),
-                        PERMISSION_REQUESTS
+                    allNeededPermissions.toTypedArray(),
+                    PERMISSION_REQUESTS
                 )
             }
         }
     }
 
     override fun onRequestPermissionsResult(
-            requestCode: Int,
-            permissions: Array<out String>,
-            grantResults: IntArray
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == PERMISSION_REQUESTS) {
-            if (ContextCompat.checkSelfPermission(applicationContext, Manifest.permission.READ_CONTACTS)
-                    == PackageManager.PERMISSION_GRANTED){
+            if (ContextCompat.checkSelfPermission(
+                    applicationContext,
+                    Manifest.permission.READ_CONTACTS
+                )
+                == PackageManager.PERMISSION_GRANTED
+            ) {
                 addFragment(ContactsListFragment())
             }
         }
     }
 
-    private fun addFragment(fragment: Fragment, backstack: Boolean = true) {
+    private fun addFragment(fragment: Fragment, backstack: Boolean = false) {
         val tx = supportFragmentManager.beginTransaction()
         tx.add(R.id.fragment_place, fragment, fragment.javaClass.name)
         if (backstack) tx.addToBackStack(fragment.javaClass.name)

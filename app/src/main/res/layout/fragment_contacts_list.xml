@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ux.fragments.ContactsListFragment">
+    tools:context=".fragments.ContactsListFragment">
 
     <TextView
         android:id="@+id/header"
@@ -37,8 +37,7 @@
             android:layout_height="0dp"
             android:contentDescription="@string/image"
             android:padding="7dp"
-            android:src="@mipmap/search"
-            android:tint="@color/app_color"
+            android:src="@drawable/search"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -62,13 +61,12 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:contentDescription="@string/image"
-            android:padding="8dp"
+            android:padding="@dimen/dimen_8dp"
             android:layout_marginEnd="@dimen/dimen_8dp"
             android:background="@drawable/round_corner_20dp"
             android:backgroundTint="@color/red_light"
             android:visibility="gone"
-            android:src="@mipmap/close"
-            android:tint="@color/red"
+            android:src="@drawable/close"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -112,7 +110,7 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:contentDescription="@string/image"
-            android:src="@mipmap/add_contacts"
+            android:src="@drawable/add_contacts"
             android:tint="@color/text_color"/>
 
         <TextView
@@ -141,6 +139,6 @@
         android:contentDescription="@string/button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@mipmap/add_contacts" />
+        app:srcCompat="@drawable/add_contacts" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
