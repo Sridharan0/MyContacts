@@ -12,6 +12,7 @@ import com.example.mycontacts.adapter.ContactsAdapter
 import com.example.mycontacts.model.Contacts
 import com.example.mycontacts.utils.ContactUtils
 import kotlinx.android.synthetic.main.fragment_contacts_list.*
+import java.util.*
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
 
@@ -47,7 +48,8 @@ class ContactsListFragment : BaseFragment() {
                 } else {
                     clearIV.visibility = View.VISIBLE
                     contacts.forEach {
-                        if (it.name.contains(s.toString()))
+                        if (it.name.toLowerCase(Locale.ROOT).contains(s.toString().toLowerCase(
+                                Locale.ROOT)))
                             searchedContacts.add(it)
                     }
                 }
